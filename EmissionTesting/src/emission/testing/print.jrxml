@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8af1486b-3df8-4fe8-9281-6bd303a67492">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="94"/>
+	<queryString>
+		<![CDATA[SELECT * FROM desipcdf_ltoemission.localjasper l;]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Chassis" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="co" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="hc" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="success" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="first_pic" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="90" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="455" y="0" width="100" height="20" uuid="acb6f7c9-afc9-47e2-9d7c-4c274b489396"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="hh &apos;o&apos;&apos;clock&apos; a, zzzz">
+				<reportElement x="455" y="20" width="100" height="20" uuid="6c7f8182-49d0-444b-90d7-41dc1866638d"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="156" y="0" width="240" height="20" uuid="9719d40e-7a45-453a-85f7-fe9f3bffd5ca"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Republic of the Philippines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="20" width="355" height="20" uuid="3e42003d-00d8-4d54-9e38-b46ff7395efa"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Department of Transportation and Communications]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="156" y="40" width="240" height="20" uuid="e0897e0e-e814-4033-be37-e6799899b3f0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Land Transportation Office]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="60" width="358" height="20" uuid="73df9d9f-e812-4737-a558-3e80eaba2595"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CERTIFICATE OF EMISSION COMPLIANCE]]></text>
+			</staticText>
+			<image>
+				<reportElement x="31" y="5" width="82" height="85" uuid="7d2109e3-ce48-4986-bba7-46743a04ddc5"/>
+				<imageExpression><![CDATA["C:\\Users\\genwockz\\Documents\\NetBeansProjects\\EmissionTesting\\src\\img\\lto.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="420" y="42" width="194" height="45" uuid="fedf629d-15bc-4e72-a690-e0b6b32e36ef"/>
+				<imageExpression><![CDATA["C:\\Users\\genwockz\\Documents\\NetBeansProjects\\EmissionTesting\\src\\img\\logolto.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="82" y="15" width="177" height="20" uuid="69b31542-3d23-4544-b53a-a4aa06bdf8a2"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[CHASSIS NUMBER: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="259" y="15" width="196" height="20" uuid="c0b2b49b-2d67-4134-805e-d21aeeef44a1"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Chassis}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="20" uuid="9481d4ac-a2e2-4090-a207-cdb282125018"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.75" lineStyle="Solid"/>
+					<topPen lineWidth="0.75" lineStyle="Solid"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[SUMMARY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="185" height="20" uuid="f5102fc9-b736-45e3-a440-b93a26619437"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Carbon Monoxide]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="20" width="185" height="20" uuid="e97922e1-4549-4753-8e8c-d20442b1439e"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Hydrocarbons]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="20" width="185" height="20" uuid="715c5a5a-1945-47ec-99e3-207afae617ce"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[RESULT]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="70" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="185" height="20" uuid="fa28e3b8-9cad-4154-aa44-d194310b0ebf"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{co}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="0" width="185" height="20" uuid="2efa9b3b-b758-4af3-a144-458f3bb2b79b"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="185" height="20" uuid="5960b339-6754-4ef8-b30d-76529b00852e"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{success}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="271" y="50" width="166" height="20" uuid="8e607c47-f2cb-4d3c-9935-50df9fc88367"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="114" y="50" width="157" height="20" uuid="7f02cf56-995b-4e29-9390-7f36d999e755"/>
+				<text><![CDATA[MVCET TESDA CERTIFICATE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="114" y="30" width="146" height="20" uuid="6a3431f8-1c70-4c56-8959-1e0f193e1440"/>
+				<text><![CDATA[TESTED AND CERTIFIED BY:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="271" y="30" width="166" height="20" uuid="e35b3696-4ddd-4f46-b097-93404b1a5493"/>
+			</rectangle>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="70" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
